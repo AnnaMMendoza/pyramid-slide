@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>Pyramid Slider</title>
+
+    <style>
+        .header {
+            background-color: rgb(114, 170, 58);
+            border-style: none;
+            font-size: 20px;
+            text-align: center;
+            padding: 30px;
+            margin-bottom: 15px;
+            color: black;
+        }
+        .box {
+            font-weight: normal;
+            align-content: center;
+            margin: none;
+            border-left: 2px solid;
+            border-right: 2px solid;
+            border-top: 2px solid;
+            background-color: rgb(114, 170, 58);
+        }
+        .options {
+            background-color: rgb(174, 216, 133);
+            line-height: 4em;
+            color: black;
+            padding-left: auto;
+            align-items: center;
+            text-align: center;
+        }
+        #pyramid {
+            text-align: right;
+            align-content: center;
+            background-color: whitesmoke;
+            color: black;
+            padding: 30px, 650px, 30px, 30px;
+            border-color: rgb(114, 170, 58);
+            border-left: solid;
+            border-right: solid;
+            border-bottom: solid;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>Pyramid Slide</h1>
+    </div>
+
+    <div class="box">
+        <div class="options">
+        <form>
+            <label>Brick Symbol:&nbsp;&nbsp;
+                <select name="symbol" type='select' onchange="drawPyramid()">
+                    <option value=" # "> # </option>
+                    <option value=" @ "> @ </option>
+                    <option value=" X "> X </option>
+                    <option value=" $ "> $ </option>
+                </select>
+            </label> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        <label form="height" > &nbsp; &nbsp; How High? &nbsp; &nbsp;
+            <input type="range" id="slider" value="1" min="1" max="20" step="1" oninput="drawPyramid()"><label id="height"></label>
+            <output for="slider" onforminput="value = slider.valueAsNumber;"></output>
+        </label>
+    </form>
+    </div>
+    </div>
+
+    <div id="pyramid">
+        <!-- Container for the pyramid -->
+    </div>
+        <script src="pyramid.js"></script>
+
+</body>
+</html>

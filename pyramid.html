@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-    <meta charset="UTF-8">
+    <!-- <meta charset="UTF-8"> -->
     <title>Pyramid Slider</title>
 
     <style>
         .header {
             background-color: rgb(114, 170, 58);
-            border-style: none;
+            border-style: 1px solid;
             font-size: 20px;
             text-align: center;
             padding: 30px;
@@ -36,7 +36,7 @@
             align-content: center;
             background-color: whitesmoke;
             color: black;
-            padding: 30px, 650px, 30px, 30px;
+            /* padding: 30px, 50px, 30px, 30px; */
             border-color: rgb(114, 170, 58);
             border-left: solid;
             border-right: solid;
@@ -62,9 +62,9 @@
                     <option value=" $ "> $ </option>
                 </select>
             </label> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-        <label form="height" > &nbsp; &nbsp; How High? &nbsp; &nbsp;
+        <label form="height"> &nbsp; &nbsp; How High? &nbsp; 
             <input type="range" id="slider" value="1" min="1" max="20" step="1" oninput="drawPyramid()"><label id="height"></label>
-            <output for="slider" onforminput="value = slider.valueAsNumber;"></output>
+            <!-- <output for="slider" onforminput="value = slider.valueAsNumber;"></output> -->
         </label>
     </form>
     </div>

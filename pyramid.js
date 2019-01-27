@@ -6,6 +6,7 @@ function drawPyramid() {
 
     var height = document.getElementById("slider").value;
     var symbol = document.getElementsByName("symbol").value;
+
 /**
  * drawPyramid
  *
@@ -21,10 +22,11 @@ function drawPyramid() {
             var rowStr = "";  
             
             for (var i = 0; i < numSpaces; i++) {
-            rowStr += "&nbsp;"; // build up a string for this row - &nbsp code for spaceChar
+                var spaceChar = "&nbsp";
+                rowStr += spaceChar; // build up a string for this row - &nbsp code for spaceChar
         }
     for (var i = 0; i < numBricks; i++) {
-            rowStr += symbol;
+        rowStr += symbol;
         }
         // create a <p> element with the text inside, insert into #pyramid
         rowElem = document.createElement("p");

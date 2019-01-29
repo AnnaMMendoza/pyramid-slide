@@ -1,11 +1,13 @@
 /**
 1st Assignment - Unit 3 - LC101
  */
-// pyramid drawing function
-function drawPyramid() {
 
-    var height = document.getElementById("slider").value;
-    var symbol = document.getElementsByName("symbol").value;
+
+
+function drawPyramid() {// pyramid drawing function
+
+    var height = document.getElementById("slider").value; //gets the height from the slider input
+    var symbolElem = symbol.options[symbol.selectedIndex].value;  // gets the symbol from the drop down menu
 
 /**
  * drawPyramid
@@ -26,13 +28,16 @@ function drawPyramid() {
                 rowStr += spaceChar; // build up a string for this row - &nbsp code for spaceChar
         }
     for (var i = 0; i < numBricks; i++) {
-        rowStr += symbol;
+        rowStr += symbolElem;
         }
         // create a <p> element with the text inside, insert into #pyramid
         rowElem = document.createElement("p");
         rowElem.innerHTML = rowStr;
         document.getElementById("pyramid").appendChild(rowElem);
 
-        document.getElementById("pyramid").innerHTML = height;
+        // document.getElementById("pyramid").innerHTML = height; // tried to show the slider value
 }
 }
+// function showHeight() {
+    // document.getElementsByTagName(input);
+// }

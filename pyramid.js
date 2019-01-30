@@ -1,8 +1,12 @@
 /**
-1st Assignment - Unit 3 - LC101
+1st Assignment - Unit 3 - LC101 - Anna Mendoza
  */
-
-
+// handler for slider input numeric display in the html span tag
+function updateTextInput(val){
+    document.getElementById('value').innerHTML = val;
+    var height = val;
+    drawPyramid(height);
+}
 
 function drawPyramid() {// pyramid drawing function
 
@@ -38,6 +42,3 @@ function drawPyramid() {// pyramid drawing function
         // document.getElementById("pyramid").innerHTML = height; // tried to show the slider value
 }
 }
-// function showHeight() {
-    // document.getElementsByTagName(input);
-// }

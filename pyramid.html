@@ -5,6 +5,11 @@
     <title>Pyramid Slider</title>
 
     <style>
+        body {
+            text-align: center;
+            margin-right: 20em;
+            margin-left: 20em;
+        }
         .header {
             background-color: rgb(114, 170, 58);
             border: 1px solid;
@@ -35,11 +40,15 @@
             text-align: center;
         }
         #pyramid {
-            text-align: right;
+            font-weight: bold;
+            font-size: 30px;
+            line-height: 0;
+            margin: 5%;
+            padding-top: 1em;
+            padding-bottom: 1em;
             align-content: center;
             background-color: whitesmoke;
             color: black;
-            /* padding: 30px, 50px, 30px, 30px; */
             border-color: rgb(114, 170, 58);
             border-top: 1px solid;
             border-left: 1px solid;
@@ -47,6 +56,7 @@
             border-bottom: 1px solid;
         }
     </style>
+
 </head>
 
 <body>
@@ -67,8 +77,8 @@
                 </select>
             </label> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
         <label form="height"><span> &nbsp; &nbsp; How High? &nbsp;
-            <input type="range" id="slider" name="height" value="1" min="1" max="20" step="1" oninput="drawPyramid()">
-            
+            <input type="range" id="slider" name="height" value="1" min="1" max="20" step="1" oninput="updateTextInput(this.value);" /><span id="value"></span>
+            <br/>
         </label>
     </form>
     </div>
